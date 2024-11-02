@@ -47,7 +47,9 @@ app.use((err, req, res, next) => {
   next(err);
 });
 
-
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
 mongoose
   .connect(process.env.CONNECTION_STRING, {
     useNewUrlParser: true,
